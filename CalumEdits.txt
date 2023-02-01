@@ -1,0 +1,37 @@
+*Change the way DFT is referenced in many places in the thesis: e.g., DFT does not enforce certain calculations (like harmonic vibrational simulations), 
+instead DFT is just a framework for calculating energy. Calculating certain properties might be difficult/costly, but it is not inherently a limitation 
+of the methodology. 
+
+*QHA is not crude! 
+
+*First paragraph of the introduction, .1-10 THz is equal to 3-333 cm-1. Either change the numbers or say 'approximately 330cm-1' DONE
+
+*pg 9 after ref 68 'but significantly more is generated' - more what? (clear up the language here) DONE
+
+*Change the units on the force on page 16 DONE
+
+* No period after in situ on page 16 DONE
+
+*Pg 17, Beer-Lambert should be hyphenated I think DONE
+
+* Fig 2.8 is pixelated DONE
+
+*Pg 32 - in the HA, third-order terms are set to zero (instead of being negligible)
+
+*3.2.5 - h-bonds are not a good example for dispersion. 
+
+*Pg 45 - I wouldnt say DFT does a poor job with IMFs in general, but maybe you can clarify exactly what forces DFT does a poor job with. 
+
+*Section 4.4 - clarify that the original simulation was performed with a different version of VASP (or whatever the difference was). --- Not a different 
+version of vasp and cant actually find what the difference is. Cant see one in OUTCAR.
+
+*Fig 5.1 - the figure legend has the same colored lines for two things, maybe change the horizontal lines to dashes (or something similar) DONE
+
+*Pg 73 - no hyphen between ab and initio DIBE
+
+*Last sentence of page 73 -> first of pg 74 - re-read and clean this up.  
+
+*Figure 5.7 - label what the different colors/markers indicate --- I have in first pane and think it's ugly and unnecessary to do in all 5 if ive understood 
+it correctly.
+
+*Section 5.4.2 - clean up the relationship of 'steepness' and 'harmonic' as discussed. 
