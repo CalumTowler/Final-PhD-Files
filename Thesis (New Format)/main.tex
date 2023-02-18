@@ -1,0 +1,157 @@
+\documentclass[oneside, 12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\graphicspath{ {./} }
+
+\pagenumbering{arabic}
+
+\usepackage{geometry}
+
+\usepackage{setspace}
+\onehalfspacing
+
+\geometry{a4paper, margin=2.5cm}
+\usepackage[pdflang={en-GB}]{hyperref}
+
+\usepackage{amsmath}
+\numberwithin{equation}{section}
+ 
+\usepackage{float}
+
+\usepackage{chemformula}
+\usepackage{cleveref}
+\usepackage{siunitx}
+\DeclareSIUnit\angstrom{\text {Å}}
+
+\usepackage{multirow}
+
+\usepackage{booktabs}
+\usepackage{tabulary}
+
+\usepackage[font={small,it},labelfont=bf]{caption}
+\usepackage{subcaption}
+
+\usepackage[T1]{fontenc}
+
+\usepackage{listings}
+
+\usepackage{caption} %Adds captions to figures
+\usepackage{subcaption}
+
+%\usepackage[table]{xcolor} 
+\usepackage{tabularx}%Inserts table
+
+\usepackage[acronym]{glossaries}
+\makeglossaries
+
+\newacronym{ir}{IR}{Infrared}
+\newacronym{em}{EM}{Electromagnetic}
+\newacronym{thz}{THz}{Terahertz}
+\newacronym{tds}{THz-TDS}{THz Time-Domain Spectroscopy}
+\newacronym{tpi}{TPI}{Terahertz Pulsed Imaging}
+\newacronym{dft}{DFT}{Density Functional Theory}
+\newacronym{alm}{\(\alpha\)LM}{\(\alpha\)-Lactose Monohydrate}
+\newacronym{xrd}{XRD}{X-Ray Diffraction}
+\newacronym{vdos}{VDOS}{Vibrational Density of States}
+\newacronym{pc}{PC}{Photoconductive}
+\newacronym{eo}{EO}{Electro-Optic}
+\newacronym{snr}{SNR}{Signal-to-Noise Ratio}
+\newacronym{cw}{CW}{Continuous Wave}
+\newacronym{bbo}{BBO}{\(\beta\)-Barium Borate}
+\newacronym{qcl}{QCLs}{Quantum Cascade Lasers}
+\newacronym{td}{TD}{Time Domain}
+\newacronym{fd}{FD}{Frequency Domain}
+\newacronym{si}{SI}{Semi-Insulating}
+\newacronym{lt}{LT}{Low Temperature Grown}
+\newacronym{ft}{FT}{Fourier Transform}
+\newacronym{rms}{RMS}{Root Mean Squared}
+\newacronym{hf}{HF}{Hartree-Fock}
+\newacronym{mbse}{MBSE}{Many Body Shr\"{o}dinger Wavefunction}
+\newacronym{lda}{LDA}{Local Density Approximation}
+\newacronym{gga}{GGA}{Generalised Gradient Approximation}
+\newacronym{bz}{BZ}{Brillouin Zone}
+\newacronym{sto}{STO}{Slater Type Orbital}
+\newacronym{gto}{GTO}{Gaussian Type Orbital}
+\newacronym{dfpt}{DFPT}{Density Functional Perturbation Theory}
+\newacronym{pbe}{PBE}{Perdew-Burke-Ernzerhof}
+\newacronym{dc}{DiC}{Dispersion Correction}
+\newacronym{ts}{TS}{Tkatchenko-Scheffler}
+\newacronym{bj}{BJ}{Becke-Johnson}
+\newacronym{paw}{PAW}{Projector Augmented-Wave}
+\newacronym{ptfe}{PTFE}{Polytetrafluoroethane}
+\newacronym{fwhm}{FWHM}{Full Width at Half Maxiumum}
+\newacronym{vdw}{VDW}{Van der Waals}
+\newacronym{ipa}{IPA}{Isopropyl Alcohol}
+\newacronym{uv}{UV}{Ultraviolet}
+\newacronym{atr}{ATR}{Attenuated Total Reflectance}
+\newacronym{ftir}{FTIR}{Fourier-Transform Infrared Spectroscopy}
+\newacronym{ho}{HO}{Harmonic Oscillator}
+\newacronym{md}{MD}{Molecular Dynamics}
+\newacronym{qha}{QHA}{Quasi-Harmonic Approximation}
+\newacronym{tpx}{TPX}{Polymethylpentene}
+
+\usepackage[style=ieee,sorting=none, citestyle=numeric-comp, backend=bibtex, url=false, doi=false, isbn=false, maxbibnames=99]{biblatex}
+\addbibresource{references} %Adds bibliography
+
+\pagenumbering{roman}
+\begin{document}
+
+\setlength{\parskip}{5pt}
+
+\input{Title.tex}
+% maybe find a style that groups columns to fixed size
+
+\chapter*{Declaration}
+\input{Intellectual Property and Publication Statements.tex}
+\clearpage
+\input{Dedication.tex}
+
+\chapter*{Acknowledgements}
+\input{Acknowledgements.tex}
+
+\chapter*{Abstract}
+\input{Abstract.tex}
+
+\tableofcontents
+
+\listoffigures
+\listoftables
+
+\printglossary[type=\acronymtype, nonumberlist, nopostdot]
+
+\chapter{Introduction}
+\pagenumbering{arabic}
+\label{ch:int}
+\input{Ch1_Introduction.tex}
+
+\chapter{Generation and Detection of Terahertz Radiation and the Methodology of Terahertz Time-Domain Spectroscopy}
+\label{ch:exp_theory}
+\input{Ch2_Experimental_Spectroscopy_Theory}
+
+\chapter{Density Functional Theory and its Applications for Vibrational Spectroscopy}
+\label{ch:dft_theory}
+\input{Ch3_DFT_Overview}
+
+\chapter{The Effect of Dispersion Corrections on Calculated Terahertz Absorption Spectra}
+\label{ch:ivdw}
+\input{Ch4_Lactose_Dispersion}
+
+\chapter{Incorporation of Anharmonicity into the Calculation of Vibrational Modes}
+\label{ch:qha}
+\input{Ch5_Lactose_QHA}
+
+\chapter{Investigation into the Effect of Small Gap-Sizes on the Terahertz Output of Photoconductive Switches}
+\label{ch:sys_dev}
+\input{Ch6_Emitters_SysDev}
+
+\chapter{Conclusions and Further Work}
+\label{ch:conclusions}
+\input{Conclusions}
+
+\printbibliography
+
+%\chapter*{COVID-19 Pandemic Impact Statement}
+%\input{COVID Impact Statement.tex}
+
+\end{document}
+

@@ -1,0 +1,242 @@
+\documentclass[oneside, 12pt]{report}
+%DIF LATEXDIFF DIFFERENCE FILE
+%DIF DEL Thesis (Corrections) (1)\main.tex   Wed Feb 15 02:07:04 2023
+%DIF ADD Thesis (New Format)\main.tex        Wed Feb 15 02:08:20 2023
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\graphicspath{ {./} }
+
+\pagenumbering{arabic}
+
+\usepackage{geometry}
+
+\usepackage{setspace}
+\onehalfspacing
+
+\geometry{a4paper, margin=2.5cm}
+\usepackage[pdflang={en-GB}]{hyperref}
+
+\usepackage{amsmath}
+\numberwithin{equation}{section}
+ 
+\usepackage{float}
+
+\usepackage{chemformula}
+\usepackage{cleveref}
+\usepackage{siunitx}
+\DeclareSIUnit\angstrom{\text {Å}}
+
+\usepackage{multirow}
+
+\usepackage{booktabs}
+\usepackage{tabulary}
+
+\usepackage[font={small,it},labelfont=bf]{caption}
+\usepackage{subcaption}
+
+\usepackage[T1]{fontenc}
+
+\usepackage{listings}
+
+\usepackage{caption} %Adds captions to figures
+\usepackage{subcaption}
+
+%\usepackage[table]{xcolor} 
+\usepackage{tabularx}%Inserts table
+
+\usepackage[acronym]{glossaries}
+\makeglossaries
+
+\newacronym{ir}{IR}{Infrared}
+\newacronym{em}{EM}{Electromagnetic}
+\newacronym{thz}{THz}{Terahertz}
+\newacronym{tds}{THz-TDS}{THz Time-Domain Spectroscopy}
+\newacronym{tpi}{TPI}{Terahertz Pulsed Imaging}
+\newacronym{dft}{DFT}{Density Functional Theory}
+\newacronym{alm}{\(\alpha\)LM}{\(\alpha\)-Lactose Monohydrate}
+\newacronym{xrd}{XRD}{X-Ray Diffraction}
+\newacronym{vdos}{VDOS}{Vibrational Density of States}
+\newacronym{pc}{PC}{Photoconductive}
+\newacronym{eo}{EO}{Electro-Optic}
+\newacronym{snr}{SNR}{Signal-to-Noise Ratio}
+\newacronym{cw}{CW}{Continuous Wave}
+\newacronym{bbo}{BBO}{\(\beta\)-Barium Borate}
+\newacronym{qcl}{QCLs}{Quantum Cascade Lasers}
+\newacronym{td}{TD}{Time Domain}
+\newacronym{fd}{FD}{Frequency Domain}
+\newacronym{si}{SI}{Semi-Insulating}
+\newacronym{lt}{LT}{Low Temperature Grown}
+\newacronym{ft}{FT}{Fourier Transform}
+\newacronym{rms}{RMS}{Root Mean Squared}
+\newacronym{hf}{HF}{Hartree-Fock}
+\newacronym{mbse}{MBSE}{Many Body Shr\"{o}dinger Wavefunction}
+\newacronym{lda}{LDA}{Local Density Approximation}
+\newacronym{gga}{GGA}{Generalised Gradient Approximation}
+\newacronym{bz}{BZ}{Brillouin Zone}
+\newacronym{sto}{STO}{Slater Type Orbital}
+\newacronym{gto}{GTO}{Gaussian Type Orbital}
+\newacronym{dfpt}{DFPT}{Density Functional Perturbation Theory}
+\newacronym{pbe}{PBE}{Perdew-Burke-Ernzerhof}
+\newacronym{dc}{DiC}{Dispersion Correction}
+\newacronym{ts}{TS}{Tkatchenko-Scheffler}
+\newacronym{bj}{BJ}{Becke-Johnson}
+\newacronym{paw}{PAW}{Projector Augmented-Wave}
+\newacronym{ptfe}{PTFE}{Polytetrafluoroethane}
+\newacronym{fwhm}{FWHM}{Full Width at Half Maxiumum}
+\newacronym{vdw}{VDW}{Van der Waals}
+\newacronym{ipa}{IPA}{Isopropyl Alcohol}
+\newacronym{uv}{UV}{Ultraviolet}
+\newacronym{atr}{ATR}{Attenuated Total Reflectance}
+\newacronym{ftir}{FTIR}{Fourier-Transform Infrared Spectroscopy}
+\newacronym{ho}{HO}{Harmonic Oscillator}
+\newacronym{md}{MD}{Molecular Dynamics}
+\newacronym{qha}{QHA}{Quasi-Harmonic Approximation}
+\newacronym{tpx}{TPX}{Polymethylpentene}
+
+\usepackage[style=ieee,sorting=none, citestyle=numeric-comp, backend=bibtex, url=false, doi=false, isbn=false, maxbibnames=99]{biblatex}
+\addbibresource{references} %Adds bibliography
+
+\pagenumbering{roman}
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
+\RequirePackage[normalem]{ulem} %DIF PREAMBLE
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\providecommand{\DIFaddtex}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
+\providecommand{\DIFdeltex}[1]{{\protect\color{red}\sout{#1}}}                      %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+\providecommand{\DIFmodbegin}{} %DIF PREAMBLE
+\providecommand{\DIFmodend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+%DIF HYPERREF PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{\texorpdfstring{\DIFaddtex{#1}}{#1}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{\texorpdfstring{\DIFdeltex{#1}}{}} %DIF PREAMBLE
+\newcommand{\DIFscaledelfig}{0.5}
+%DIF HIGHLIGHTGRAPHICS PREAMBLE %DIF PREAMBLE
+\RequirePackage{settobox} %DIF PREAMBLE
+\RequirePackage{letltxmacro} %DIF PREAMBLE
+\newsavebox{\DIFdelgraphicsbox} %DIF PREAMBLE
+\newlength{\DIFdelgraphicswidth} %DIF PREAMBLE
+\newlength{\DIFdelgraphicsheight} %DIF PREAMBLE
+% store original definition of \includegraphics %DIF PREAMBLE
+\LetLtxMacro{\DIFOincludegraphics}{\includegraphics} %DIF PREAMBLE
+\newcommand{\DIFaddincludegraphics}[2][]{{\color{blue}\fbox{\DIFOincludegraphics[#1]{#2}}}} %DIF PREAMBLE
+\newcommand{\DIFdelincludegraphics}[2][]{% %DIF PREAMBLE
+\sbox{\DIFdelgraphicsbox}{\DIFOincludegraphics[#1]{#2}}% %DIF PREAMBLE
+\settoboxwidth{\DIFdelgraphicswidth}{\DIFdelgraphicsbox} %DIF PREAMBLE
+\settoboxtotalheight{\DIFdelgraphicsheight}{\DIFdelgraphicsbox} %DIF PREAMBLE
+\scalebox{\DIFscaledelfig}{% %DIF PREAMBLE
+\parbox[b]{\DIFdelgraphicswidth}{\usebox{\DIFdelgraphicsbox}\\[-\baselineskip] \rule{\DIFdelgraphicswidth}{0em}}\llap{\resizebox{\DIFdelgraphicswidth}{\DIFdelgraphicsheight}{% %DIF PREAMBLE
+\setlength{\unitlength}{\DIFdelgraphicswidth}% %DIF PREAMBLE
+\begin{picture}(1,1)% %DIF PREAMBLE
+\thicklines\linethickness{2pt} %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,0){\framebox(1,1){}}}% %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,0){\line( 1,1){1}}}% %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,1){\line(1,-1){1}}}% %DIF PREAMBLE
+\end{picture}% %DIF PREAMBLE
+}\hspace*{3pt}}} %DIF PREAMBLE
+} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddbegin}{\DIFaddbegin} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddend}{\DIFaddend} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelbegin}{\DIFdelbegin} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelend}{\DIFdelend} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddbegin}{\DIFOaddbegin \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbegin}{\DIFOdelbegin \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddbeginFL}{\DIFaddbeginFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddendFL}{\DIFaddendFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelbeginFL}{\DIFdelbeginFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelendFL}{\DIFdelendFL} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddbeginFL}{\DIFOaddbeginFL \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbeginFL}{\DIFOdelbeginFL \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+%DIF COLORLISTINGS PREAMBLE %DIF PREAMBLE
+\RequirePackage{listings} %DIF PREAMBLE
+\RequirePackage{color} %DIF PREAMBLE
+\lstdefinelanguage{DIFcode}{ %DIF PREAMBLE
+%DIF DIFCODE_UNDERLINE %DIF PREAMBLE
+  moredelim=[il][\color{red}\sout]{\%DIF\ <\ }, %DIF PREAMBLE
+  moredelim=[il][\color{blue}\uwave]{\%DIF\ >\ } %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstdefinestyle{DIFverbatimstyle}{ %DIF PREAMBLE
+	language=DIFcode, %DIF PREAMBLE
+	basicstyle=\ttfamily, %DIF PREAMBLE
+	columns=fullflexible, %DIF PREAMBLE
+	keepspaces=true %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstnewenvironment{DIFverbatim}{\lstset{style=DIFverbatimstyle}}{} %DIF PREAMBLE
+\lstnewenvironment{DIFverbatim*}{\lstset{style=DIFverbatimstyle,showspaces=true}}{} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
+
+\begin{document}
+
+\setlength{\parskip}{5pt}
+
+\input{Title.tex}
+% maybe find a style that groups columns to fixed size
+
+\chapter*{Declaration}
+\input{Intellectual Property and Publication Statements.tex}
+\clearpage
+\input{Dedication.tex}
+
+\chapter*{Acknowledgements}
+\input{Acknowledgements.tex}
+
+\chapter*{Abstract}
+\input{Abstract.tex}
+
+\tableofcontents
+
+\listoffigures
+\listoftables
+
+\printglossary[type=\acronymtype, nonumberlist, nopostdot]
+
+\chapter{Introduction}
+\pagenumbering{arabic}
+\label{ch:int}
+\input{Ch1_Introduction.tex}
+
+\chapter{Generation and Detection of Terahertz Radiation and the Methodology of Terahertz Time-Domain Spectroscopy}
+\label{ch:exp_theory}
+\input{Ch2_Experimental_Spectroscopy_Theory}
+
+\chapter{Density Functional Theory and its Applications for Vibrational Spectroscopy}
+\label{ch:dft_theory}
+\input{Ch3_DFT_Overview}
+
+\chapter{The Effect of Dispersion Corrections on Calculated Terahertz Absorption Spectra}
+\label{ch:ivdw}
+\input{Ch4_Lactose_Dispersion}
+
+\chapter{Incorporation of Anharmonicity into the Calculation of Vibrational Modes}
+\label{ch:qha}
+\input{Ch5_Lactose_QHA}
+
+\chapter{Investigation into the Effect of Small Gap-Sizes on the Terahertz Output of Photoconductive Switches}
+\label{ch:sys_dev}
+\input{Ch6_Emitters_SysDev}
+
+\chapter{Conclusions and Further Work}
+\label{ch:conclusions}
+\input{Conclusions}
+
+\printbibliography
+
+%\chapter*{COVID-19 Pandemic Impact Statement}
+%\input{COVID Impact Statement.tex}
+
+\end{document}
+
